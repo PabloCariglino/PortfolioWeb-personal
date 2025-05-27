@@ -8,6 +8,9 @@ const Contacto = () => {
     mensaje: "",
   });
 
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -27,14 +30,20 @@ const Contacto = () => {
       )
       .then(
         (result) => {
-          alert("Mensaje enviado con éxito!");
+          setModalMessage("Mensaje enviado con éxito!");
+          setShowModal(true);
           setFormData({ nombre: "", email: "", mensaje: "" });
         },
         (error) => {
-          alert("Error al enviar el mensaje. Intenta de nuevo.");
+          setModalMessage("Error al enviar el mensaje. Intenta de nuevo.");
+          setShowModal(true);
           console.error(error);
         }
       );
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -43,6 +52,11 @@ const Contacto = () => {
         <div className="h-main">
           <div className="h-text">
             <h2>Contacto</h2>
+            <div className="h-btn">
+              {/* <a href="#" className="hh-btn">
+                Contactame <i className="ri-arrow-right-line"></i>
+              </a> */}
+            </div>
           </div>
         </div>
         <div className="contact-form">
@@ -76,6 +90,18 @@ const Contacto = () => {
           </form>
         </div>
       </div>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="modal-overlay" onClick={handleCloseModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <p>{modalMessage}</p>
+            <button onClick={handleCloseModal} className="modal-close-btn">
+              Cerrar
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
