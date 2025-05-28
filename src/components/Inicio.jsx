@@ -4,6 +4,8 @@ import {
   RiLinkedinBoxFill,
   RiMailLine,
 } from "react-icons/ri";
+import cvpablo from "../assets/cv-pablo.pdf";
+import perfilImg from "../assets/img-perfil-pablo.jpg";
 
 const Inicio = () => {
   const handleCopyEmail = () => {
@@ -41,13 +43,14 @@ const Inicio = () => {
           <a href="#" onClick={handleCopyEmail}>
             <RiMailLine /> E-Mail
           </a>
-          <a href="/cv-pablo.pdf" download className="btn2">
+          <a href={cvpablo} download className="btn2">
             <RiArrowDownLine /> Descargar CV
           </a>
         </div>
       </div>
       <div className="inicio-img">
-        <img src="/img-perfil-pablo.jpg" alt="Perfil" />
+        <img src={perfilImg} alt="Perfil Pablo" />
+        {/* <img src="/assets/img-perfil-pablo.jpg" alt="Perfil Pablo" /> */}
       </div>
     </section>
   );
