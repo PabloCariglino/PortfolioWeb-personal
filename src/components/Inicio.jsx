@@ -41,13 +41,13 @@ const Inicio = () => {
           <a href="#" onClick={handleCopyEmail}>
             <RiMailLine /> E-Mail
           </a>
-          <a href="/assets/cv-pablo.pdf" download className="btn2">
+          <a href="/cv-pablo.pdf" download className="btn2">
             <RiArrowDownLine /> Descargar CV
           </a>
         </div>
       </div>
       <div className="inicio-img">
-        <img src="/assets/img-perfil-pablo.jpg" alt="Perfil" />
+        <img src="/img-perfil-pablo.jpg" alt="Perfil" />
       </div>
     </section>
   );
