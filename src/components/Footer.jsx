@@ -11,7 +11,13 @@ const Footer = () => {
         <div className="copyright">
           <p>Desarrolado por Paul</p>
         </div>
-        <Link to="inicio" smooth={true} duration={500} className="scroll-top">
+        <Link
+          to="inicio"
+          smooth={true}
+          duration={500}
+          className="scroll-top"
+          aria-label="Volver al inicio"
+        >
           <RiArrowUpLine />
         </Link>
       </div>

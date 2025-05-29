@@ -40,10 +40,10 @@ const Inicio = () => {
           </a>
         </div>
         <div className="button">
-          <a href="#" onClick={handleCopyEmail}>
+          <a href="#" onClick={handleCopyEmail} className="btn">
             <RiMailLine /> E-Mail
           </a>
-          <a href={cvpablo} download className="btn2">
+          <a href={cvpablo} download className="btn btn-secondary">
             <RiArrowDownLine /> Descargar CV
           </a>
         </div>

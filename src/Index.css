@@ -74,7 +74,7 @@ header {
 }
 
 section {
-  padding: 40px 19% 30px;
+  padding: 2.5rem 19% 2rem;
 }
 
 .inicio {
@@ -82,29 +82,30 @@ section {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Cambio a centrar ambos elementos */
   gap: 35px;
   cursor: auto;
 }
 
 .inicio-img {
-  height: 330px;
-  width: 330px;
+  max-width: 330px;
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  margin-right: 70px;
-  margin-bottom: 90px;
+  margin: 0 auto;
 }
 
 .inicio-img img {
-  height: auto;
   width: 100%;
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 0 90px var(--main-color);
 }
 
 .inicio-text {
   padding-top: 60px;
-  margin-left: 25px;
+  margin-left: 0; /* Eliminado margin-left fijo */
+  text-align: center; /* Centrado del texto */
 }
 
 .inicio-text h5 {
@@ -122,13 +123,14 @@ section {
 
 .social {
   margin-bottom: 30px;
-  display: flex; /* Asegura que los elementos se alineen en línea */
-  align-items: center; /* Centra verticalmente */
-  gap: 15px; /* Espacio entre los elementos */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center; /* Centrado de los íconos sociales */
 }
 
 .social a {
-  color: var(--violet-color); /* Violeta oscuro definido en :root */
+  color: var(--violet-color);
 }
 
 .social a:first-child {
@@ -164,6 +166,11 @@ section {
   border: 1px solid transparent;
   border-radius: 8px;
   transition: all 0.7s;
+  margin-right: 22px;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 .button a:hover {
@@ -240,13 +247,13 @@ header.sticky {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  transition: all 0.3s ease; /* Para efectos futuros si los añades */
+  transition: all 0.3s ease;
 }
 
 .skill-name {
-  margin-top: 5px; /* Espacio entre el ícono y el nombre */
-  font-size: 14px; /* Tamaño del texto */
-  color: var(--text-color); /* Usa el color definido en :root */
+  margin-top: 5px;
+  font-size: 14px;
+  color: var(--text-color);
   text-align: center;
 }
 
@@ -262,13 +269,13 @@ header.sticky {
   margin-top: 4rem;
 }
 
-.row {
+.project-row {
   background: #25262d;
   border-radius: 12px;
   border: 1px solid transparent;
   padding: 15px 20px;
   transition: all 0.7s;
-  height: 350px; /* Ajuste para uniformidad */
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -294,7 +301,7 @@ header.sticky {
   transform: translateY(-50%);
   z-index: 1;
   font-size: 0;
-  width: 30px; /* Más grandes */
+  width: 30px;
   height: 30px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
@@ -304,16 +311,16 @@ header.sticky {
 }
 
 .slick-prev {
-  left: 10px; /* Dentro de la tarjeta */
+  left: 10px;
 }
 
 .slick-next {
-  right: 10px; /* Dentro de la tarjeta */
+  right: 10px;
 }
 
 .slick-prev:before,
 .slick-next:before {
-  font-size: 20px; /* Tamaño del ícono de la flecha */
+  font-size: 20px;
   color: #fff;
 }
 
@@ -328,20 +335,20 @@ header.sticky {
   margin-bottom: 0.5rem;
 }
 
-.row h5 {
+.project-row h5 {
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 5px;
   color: #a6bbcc;
 }
 
-.row h4 {
+.project-row h4 {
   font-size: 17px;
   font-weight: 600;
   color: #fff;
 }
 
-.row i {
+.project-row i {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -381,7 +388,7 @@ header.sticky {
 }
 
 /* Efecto de difuminado en las tarjetas al pasar el cursor */
-.row:hover {
+.project-row:hover {
   border: 1px solid var(--main-color);
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 0 20px var(--main-color);
@@ -450,7 +457,8 @@ header.sticky {
 
 .contact-form form {
   position: relative;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
 }
 
 form input,
@@ -477,14 +485,14 @@ form textarea {
 
 .send-btn {
   display: inline-block;
-  padding: 10px 22px; /* Igual que .button a */
+  padding: 10px 22px;
   background: var(--main-color);
   color: var(--bg-color);
-  font-size: 14px; /* Igual que .button a */
+  font-size: 14px;
   font-weight: 600;
-  border: 1px solid transparent; /* Igual que .button a */
+  border: 1px solid transparent;
   border-radius: 8px;
-  transition: all 0.7s; /* Igual que .button a */
+  transition: all 0.7s;
   width: 30%;
   cursor: pointer;
 }
@@ -497,7 +505,6 @@ form textarea {
   margin-top: 50px;
   padding: 15px 4%;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -576,8 +583,8 @@ form textarea {
 }
 
 .h-text {
-  text-align: center; /* Centra todo el contenido dentro de .h-text */
-  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  text-align: center;
+  width: 100%;
 }
 
 @media (max-width: 1650px) {
@@ -590,7 +597,7 @@ form textarea {
   }
 
   section {
-    padding: 50px 8% 50px;
+    padding: 2rem 8% 1.5rem;
   }
 
   .footer {
@@ -608,7 +615,7 @@ form textarea {
   }
 
   section {
-    padding: 50px 4% 50px;
+    padding: 2rem 4% 1.5rem;
   }
 
   .footer {
@@ -624,11 +631,12 @@ form textarea {
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 930px) {
   .inicio-img {
     margin: 0 auto;
-    height: 350px;
-    width: 350px;
+    max-width: 350px;
+    width: 100%;
+    height: auto;
   }
 
   .inicio {
@@ -639,43 +647,176 @@ form textarea {
   }
 }
 
-@media (max-width: 740px) {
-  .center p {
-    padding: 0;
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   #menu-icon {
     display: block;
-  }
-  :root {
-    --h1-font: 3.8rem;
-    --h2-font: 2.5rem;
-    --p-font: 14px;
   }
   .navbar {
     position: absolute;
     top: 100%;
     right: -100%;
-    width: 270px;
-    height: 100vh;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     background: #25262d;
     padding: 20px 10px;
-    gap: 0.6rem;
-    text-align: left;
+    gap: 1rem;
+    text-align: center;
     transition: all 0.7s;
   }
   .navbar a {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    margin: 10px 0;
   }
   .navbar.open {
     right: 0;
   }
-  form.send-btn {
-    width: 50%;
+  .logo {
+    font-size: 24px;
   }
+}
+
+@media (max-width: 740px) {
+  .center-sobremi p {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 10px 4%;
+  }
+  header.sticky {
+    padding: 8px 4%;
+  }
+  :root {
+    --h1-font: 2.8rem;
+    --h2-font: 2.5rem;
+    --p-font: 14px;
+  }
+  .navbar {
+    display: flex; /* Corregido para que el menú hamburguesa funcione */
+  }
+  .inicio {
+    padding: 1.5rem 4%;
+    gap: 30px;
+  }
+  .inicio-text {
+    margin-left: 0;
+    text-align: center;
+  }
+  .social {
+    justify-content: center;
+  }
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .button a {
+    margin-left: 0;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+  }
+  .carousel-media {
+    height: 120px;
+  }
+  .project-row {
+    height: 300px;
+  }
+  .project-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .project-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+  .contact-form form {
+    width: 100%;
+  }
+  form input,
+  form textarea {
+    padding: 15px;
+  }
+  .send-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .scroll-top {
+    font-size: 40px;
+  }
+  .skill-icon {
+    padding: 5px;
+  }
+  .skill-icon svg {
+    font-size: 30px;
+  }
+  .skill-name {
+    font-size: 12px;
+  }
+  .sobremi-contenido {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    gap: 1.5rem;
+  }
+  .fullscreen-content {
+    max-width: 95%;
+    max-height: 80%;
+  }
+  .fullscreen-prev,
+  .fullscreen-next {
+    font-size: 20px;
+    padding: 5px;
+  }
+  .modal-content {
+    width: 90%;
+    max-width: 250px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --h1-font: 2.2rem;
+    --h2-font: 1.8rem;
+    --p-font: 0.9rem;
+  }
+  .inicio-img {
+    max-width: 250px;
+  }
+  section {
+    padding: 1rem 4% 0.5rem;
+  }
+}
+
+/* Clases unificadas para botones */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: var(--main-color);
+  color: var(--bg-color);
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: all 0.7s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
 }

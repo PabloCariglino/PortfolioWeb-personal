@@ -86,7 +86,7 @@ const Contacto = () => {
               onChange={handleChange}
               required
             ></textarea>
-            <input type="submit" value="Enviar mensaje" className="send-btn" />
+            <input type="submit" value="Enviar mensaje" className="btn" />{" "}
           </form>
         </div>
       </div>

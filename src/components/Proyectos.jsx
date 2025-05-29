@@ -134,7 +134,8 @@ const Proyectos = () => {
           </div>
           <div className="proyectos-contenido">
             {projects.map((project, index) => (
-              <div key={index} className="row">
+              <div key={index} className="project-row">
+                {" "}
                 <Slider {...sliderSettings}>
                   {project.media.map((item, idx) => (
                     <div

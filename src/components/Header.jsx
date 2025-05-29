@@ -45,7 +45,12 @@ const Header = () => {
           </Link>
         </li>
       </ul>
-      <div className="bx bx-menu" id="menu-icon" onClick={toggleMenu}>
+      <div
+        className="bx bx-menu"
+        id="menu-icon"
+        onClick={toggleMenu}
+        aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+      >
         {isMenuOpen ? <RiCloseLine size={34} /> : <RiMenu3Line size={34} />}
       </div>
     </header>

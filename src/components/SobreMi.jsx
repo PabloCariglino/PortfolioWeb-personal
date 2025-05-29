@@ -40,18 +40,25 @@ const SobreMi = () => {
           </div>
           <p>
             Soy un desarrollador web full-stack con experiencia en todo el
-            proceso de desarrollo web, desde el inicio de un proyecto,
-            desarrollo, su finalizacion y mantenimiento en el tiempo. Me gusta
-            involucrarme en cada etapa, escribiendo código limpio y eficiente, y
-            adaptándome a las tecnologías que el proyecto necesite. He trabajado
-            en proyectos donde aplicamos dinámicas Scrum y Agile, participando
-            activamente en sprints, reuniones peridodicas y todo lo que implica
-            colaborar en equipo para entregar resultados rápidos y de calidad.
-            Además, me encargo de todo lo necesario para construir aplicaciones
-            web y APIs REST, desde el diseño hasta la implementación y las
-            pruebas. Gracias a mi paso por roles administrativos y equipos
-            variados, he desarrollado habilidades blandas que ayudan a mi
-            comunicacion, trabajar en equipo y adaptarme al proceso.
+            proceso de desarrollo, desde el inicio de un proyecto, su
+            desarrollo, su finalización y su mantenimiento a lo largo del
+            tiempo. Disfruto involucrarme en cada etapa, escribiendo código
+            limpio y eficiente, y adaptándome a las tecnologías que el proyecto
+            requiera.
+          </p>
+          <p>
+            He trabajado en proyectos que implementaban dinámicas Scrum y Agile,
+            participando activamente en sprints, reuniones periódicas y todo lo
+            que implica colaborar en equipo para entregar resultados rápidos y
+            de calidad. Además, me encargo de todo lo necesario para construir
+            aplicaciones web y APIs REST, desde el diseño hasta la
+            implementación y las pruebas.
+          </p>
+          <p>
+            Gracias a mi experiencia en roles administrativos y equipos
+            variados, he desarrollado habilidades blandas que fortalecen mi
+            comunicación, mi capacidad para trabajar en equipo y mi
+            adaptabilidad a los procesos.
           </p>
         </div>
         <div className="h-text">
